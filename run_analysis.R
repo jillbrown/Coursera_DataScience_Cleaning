@@ -80,4 +80,4 @@ finaldata4 <- aggregate(finaldata3a, by=list(subject=finaldata3$SubjectID,activi
 # Add activity labels
 tidydata <- merge(finaldata4, activity, by.x = "ActivityType", by.y = "ActivityType")
 
-write.csv(file = "tidydata.csv", x = tidydata)
+write.table(file = "tidydata", x = tidydata, row.name=FALSE)
